@@ -42,7 +42,7 @@ const store = MongoStore.create({
     crypto:{
         secret:process.env.SECRET
     },
-    touchAfter: 24*3600,
+    touchAfter: 24 * 3600,
 });
 
 store.on("error", () => {
@@ -50,10 +50,10 @@ store.on("error", () => {
 })
 
 const sessionOptions = {
-    store,
     secret:process.env.SECRET,
     resave:false,
     saveUninitialized:true,
+    store,
     cookie:{
         expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
         maxAge: 7 * 24 * 60 * 60 * 1000,
