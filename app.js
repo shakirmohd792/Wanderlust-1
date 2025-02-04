@@ -31,7 +31,7 @@ async function main() {
 
 app.use(
     cors({
-      origin: 'http://localhost:5173', // Frontend URL
+      origin: 'https://wanderlust-react-js.vercel.app', // Frontend URL
       credentials: true, // Allow credentials (cookies)
     }))
 app.use(express.urlencoded({extended:true}))
